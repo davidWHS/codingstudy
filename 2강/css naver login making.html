@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- 질문 
+
+1.position absolute를  login_form에 걸었고
+  relative는 1.로고이미지 2.아래 회원가입 등등 a링크 이렇게 걸었으며
+
+  submit버튼의 gif도 position:absolute를 걸어서 했는데
+  absolute와 relative는 서로 상관관계가 있는 것인가?
+
+2.로그인(submit)버튼 gif 넣는 것 사이즈조절어떻게했지
+  나는 직접 img태그에 css로 width:50px;로 하였다
+
+3.로그인active할때 코드를
+왜 display:block;으로 쓰는가? 
+
+4./* */그리고 회원가입, 비밀번호찾기, 등 거기에 margin-right로 띄워주면
+왜 전체적인 화면의 비율에 변화가 생기는가?
+-->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      body{
+        width: 2000px;
+        height: 100vh;
+      
+        display:flex;
+      justify-content: center;
+      align-items: center;
+      }
+      .login_logo{
+        position:relative;
+        
+        bottom:300px;
+        left:140px;
+        
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login_form{
+        border:1px solid lightgray;
+        height:350px;
+        width:450px;
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+        position:absolute;
+      }
+      .idpart{
+        width:300px;
+        height: 50px;
+        margin-bottom: 30px;
+      }
+      .idpart:focus{
+        outline:none;
+        border:solid 1px #03c750;
+      }
+      .passwordpart{
+        width:300px;
+        height: 50px;
+        margin-bottom: 30px;
+      }
+      .passwordpart:focus{
+        outline:none;
+        border:solid 1px #03c750;
+      }
+      .button_login_submmit>button{
+        width:310px;
+        height:50px;
+        margin-bottom: 20px;
+        background-color: #03c750;
+        color:white;
+        border:none;
+        font-weight:bold;
+        font-size:16px;
+      }
+      .button_login_submmit>button>img{
+        width:50px;
+        display:none; 
+        position:absolute;
+        right:270px;
+        top:226px;
+      }
+      .button_login_submmit>button:active >img{
+        display:block;
+      }
+      .button_signin{
+        width:140px;
+        height:40px;
+        margin-bottom: 20px;
+      }
+      .button_findpassword{
+        margin-left:100px;
+      }
+      .login_form_under{
+        display:block;
+        
+        position:relative;
+        
+        top:230px;
+        right:190px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .login_form_under>a{
+        color: gray;
+        text-decoration: none;
+        /*margin-right:100px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login_logo">
+      <a href="http://www.naver.com">
+        <img src="naver_logo.png" width="400px"a href="#"/>
+      </a>
+    </div>
+    <div class="login_form">
+      <div>
+        <div>
+          <input class="idpart" type="text" placeholder="아이디"></input>
+        </div>
+        <div>
+          <input class="passwordpart" type="password" placeholder="비밀번호"></input>
+        </div>
+        <div class="button_login_submmit">
+          <button><img src="loading.gif" />로그인</button>
+        </div>
+      </div>
+    </div>
+    <div class="login_form_under">
+      <a href="#">회원가입 I</a>
+      <a href="#"> 아이디 찾기 I</a>
+      <a href="#"> 비밀번호 찾기</a>
+    </div>
+  </body>
+</html>

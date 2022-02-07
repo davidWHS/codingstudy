@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        width : 1400px;
+        height : 100vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login {
+        height : 500px;
+        width : 600px;
+        border: 0.5px solid #ddd;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login_form_id {
+        margin-bottom: 30px;
+      }
+      .login_form_id>input{
+        height:50px;
+        width: 300px;
+
+        border : 0.2px solid #bbb;
+      }
+      .login_form_password {
+        margin-bottom: 30px;
+      }
+      .login_form_password>input{
+        height:50px;
+        width: 300px;
+
+        border : 0.2px solid #bbb;
+      }
+      .login_form_submit {
+        margin-bottom : 30px;
+      }
+      .login_form_submit>button{
+        position: relative;
+        height:50px;
+        width :308px;
+        background-color: green;
+        border : 0px solid black;
+
+        color : white;
+        font-weight: bold;
+        font-size : 16px;
+      }
+      .login_form_submit>button>img {
+        display: none;
+        position: absolute;
+        top : 3px;
+        left : 50px;
+        height:40px;
+      }
+      .login_form_other {
+        display: flex;
+        justify-content: center;
+      }
+      .login_form_other>button{
+        height:50px;
+        width :154px;
+        background-color: green;
+        border : 0px solid black;
+
+        color : white;
+        font-weight: bold;
+        font-size : 16px;
+      }
+      .login_form_other>a{
+        height:50px;
+        width :154px;
+      }
+
+      .login_form_other .forgot_password{
+        margin-top: 10px;
+        text-align: center;
+        text-decoration: underline;
+      }
+
+
+      .login_form_submit>button:active > img{
+        display:block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='login'>
+      <div class='login_form'>
+        <div class='login_form_id'>
+          <input placeholder="아이디" />
+        </div>
+        <div class='login_form_password'>
+          <input placeholder="비밀번호" />
+        </div>
+        <div class='login_form_submit'>
+          
+          <button> 
+            <img src='loading.gif' />
+            로그인 
+          </button>
+        </div>
+        <div class='login_form_other'>
+          <a class='forgot_password' href='https://naver.com'>
+            패스워드 찾기
+          </a>
+          <button>회원가입</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
